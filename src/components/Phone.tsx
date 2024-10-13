@@ -6,7 +6,6 @@ interface PhoneProps extends HTMLAttributes<HTMLDivElement> {
   dark?: boolean;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Phone = ({ imgSrc, className, dark = false, ...props }: PhoneProps) => {
   return (
     <div
