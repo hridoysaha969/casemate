@@ -15,7 +15,6 @@ const Phone = ({ imgSrc, className, dark = false, ...props }: PhoneProps) => {
       )}
       {...props}
     >
-      {/* eslint-disable @next/next/no-img-element */}
       <img
         src={
           dark
