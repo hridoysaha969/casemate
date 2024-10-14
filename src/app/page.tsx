@@ -214,7 +214,7 @@ export default function Home() {
                   className="h-12 w-12 rounded-full object-cover"
                 />
                 <div className="flex flex-col">
-                  <p className="font-semibold">Josh</p>
+                  <p className="font-semibold">Hridoy</p>
                   <div className="flex gap-1.5 items-center text-zinc-600">
                     <Check className="h-4 w-4 stroke-[3px] text-rose-600" />
                     <p className="text-sm">Verified Purchase</p>
