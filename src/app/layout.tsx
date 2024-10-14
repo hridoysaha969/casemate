@@ -10,7 +10,7 @@ const recursive = Recursive({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "CaseMate - Make your own case.",
-  description: "A Functional E-Com website developed by Hridoy Saha",
+  description: "A Customizable Phone Case website developed by Hridoy Saha",
 };
 
 export default function RootLayout({
