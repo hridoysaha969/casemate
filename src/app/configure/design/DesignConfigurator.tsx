@@ -44,6 +44,7 @@ const DesignConfigurator = ({
   imageUrl,
   imageDimensions,
 }: DesignConfiguratorProps) => {
+  const [loading, setLoading] = useState(false);
   const { toast } = useToast();
   const router = useRouter();
 
@@ -92,6 +93,7 @@ const DesignConfigurator = ({
   const { startUpload } = useUploadThing("imageUploader");
 
   async function saveConfiguration() {
+    setLoading(true);
     try {
       const {
         left: caseLeft,
@@ -405,6 +407,8 @@ const DesignConfigurator = ({
               </p>
 
               <Button
+                isLoading={loading}
+                loadingText="Loading"
                 onClick={() =>
                   saveConfig({
                     configId,

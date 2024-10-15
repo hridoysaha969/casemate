@@ -22,6 +22,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
   const { id } = configuration;
   const { user } = useKindeBrowserClient();
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setShowConfetti(true);
@@ -59,6 +60,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
   });
 
   const handleCheckout = async () => {
+    setLoading(true);
     if (user) {
       createPaymentSession({ configId: configuration.id });
     } else {
@@ -164,6 +166,8 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
 
             <div className="mt-8 flex justify-end pb-12">
               <Button
+                isLoading={loading}
+                loadingText="Loading"
                 onClick={() => handleCheckout()}
                 className="px-4 sm:px-6 lg:px-8"
               >
