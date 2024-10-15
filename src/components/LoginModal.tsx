@@ -9,6 +9,7 @@ import {
 import Image from "next/image";
 import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs";
 import { buttonVariants } from "./ui/button";
+import { DialogTrigger } from "@radix-ui/react-dialog";
 
 const LoginModal = ({
   isOpen,
@@ -19,7 +20,7 @@ const LoginModal = ({
 }) => {
   return (
     <Dialog onOpenChange={setIsOpen} open={isOpen}>
-      <DialogContent className="absolute top-44 sm:top-1/2 z-[99999999]">
+      <DialogContent className="z-[99999999]">
         <DialogHeader>
           <div className="relative mx-auto w-24 h-24 mb-2">
             <Image
