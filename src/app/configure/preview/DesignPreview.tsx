@@ -67,8 +67,6 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
     }
   };
 
-  console.log(user);
-
   return (
     <>
       <div
